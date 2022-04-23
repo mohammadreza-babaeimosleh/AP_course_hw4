@@ -35,7 +35,14 @@ UniquePtr<T>::~UniquePtr()
 template<typename T>
 UniquePtr<T>::UniquePtr(const UniquePtr<T>& ptr)
 {
-    throw std::logic_error { "fuck" };
+    throw std::logic_error { "assignment error" };
+}
+
+
+template<typename T>
+UniquePtr<T>& UniquePtr<T>::operator=(const UniquePtr<T> ptr)
+{
+    throw std::logic_error { "assignment error" };
 }
 
 

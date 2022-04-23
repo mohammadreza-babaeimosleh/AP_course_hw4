@@ -8,7 +8,9 @@ int main(int argc, char **argv)
     if (true) // make false to run unit-tests
     {
         UniquePtr<int> ptr{new int{10}};
-        UniquePtr<int> ptr1{make_unique<int>(10)};
+        UniquePtr<int> ptr1{new int{10}};
+        UniquePtr<int> ptr2{new int{11}};
+        ptr2 = ptr1;
        // UniquePtr<int> ptr2{ptr1};
         // //std::cout<< *ptr << std::endl;
         // int a = 5;
