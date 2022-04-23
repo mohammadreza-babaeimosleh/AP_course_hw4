@@ -7,11 +7,8 @@ int main(int argc, char **argv)
 {
     if (true) // make false to run unit-tests
     {
-        UniquePtr<int> ptr1{new int{10}};
-        UniquePtr<int> ptr2{new int{11}};
-        UniquePtr<int> ptr{new int{10}};
-        std::cout << *ptr << std::endl; // output: 10
-        
+        UniquePtr<std::string> ptr{new std::string{"hello"}};
+        std::cout << ptr->length() << std::endl; // output: 5
     }
     else
     {
