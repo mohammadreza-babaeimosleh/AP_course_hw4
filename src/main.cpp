@@ -9,6 +9,7 @@ int main(int argc, char **argv)
     {
         UniquePtr<int> ptr{new int{10}};
         UniquePtr<int> ptr1{make_unique<int>(10)};
+       // UniquePtr<int> ptr2{ptr1};
         // //std::cout<< *ptr << std::endl;
         // int a = 5;
         // int* p = &a;

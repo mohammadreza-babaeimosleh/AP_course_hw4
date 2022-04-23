@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../include/shared_ptr.h
-shared_ptr.hpp
-../include/shared_ptr.hpp
-
-../include/shared_ptr.hpp
-
 ../include/unique_ptr.h
 unique_ptr.hpp
 ../include/unique_ptr.hpp
@@ -27,20 +21,4 @@ unique_ptr.h
 /usr/src/app/src/unique_ptr.h
 memory
 -
-
-/usr/src/app/src/unit_test.cpp
-algorithm
--
-gtest/gtest.h
-/usr/src/app/src/gtest/gtest.h
-gmock/gmock.h
-/usr/src/app/src/gmock/gmock.h
-string
--
-vector
--
-unique_ptr.h
-/usr/src/app/src/unique_ptr.h
-shared_ptr.h
-/usr/src/app/src/shared_ptr.h
 

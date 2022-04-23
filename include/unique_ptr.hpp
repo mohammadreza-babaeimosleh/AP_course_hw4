@@ -27,7 +27,7 @@ template<typename T>
 UniquePtr<T>::~UniquePtr()
 {
     std::cout << "unique_ptr distructor" << std::endl;
-    delete _p;
+    delete[] _p;
      _p = nullptr;
 }
 
