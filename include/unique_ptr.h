@@ -11,7 +11,7 @@ class UniquePtr
     ~UniquePtr();
     UniquePtr(const UniquePtr& ptr);
     UniquePtr<T>& operator=(const UniquePtr<T> ptr);
-
+    T* get();
 
     private:
         T* _p;

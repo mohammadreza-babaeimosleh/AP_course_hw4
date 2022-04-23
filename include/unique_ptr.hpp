@@ -45,6 +45,12 @@ UniquePtr<T>& UniquePtr<T>::operator=(const UniquePtr<T> ptr)
     throw std::logic_error { "assignment error" };
 }
 
+template<typename T>
+T* UniquePtr<T>::get()
+{
+    return _p;
+}
+
 
 
 
