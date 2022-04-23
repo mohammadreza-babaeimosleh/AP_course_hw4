@@ -15,10 +15,10 @@ UniquePtr<T>::UniquePtr()
 
 
 template<typename T>
-UniquePtr<T> make_unique(T ptr_destination)
+T* make_unique(T ptr_destination)
 {
     std::cout << "contructing through make" << std::endl;
-    UniquePtr<T> ptr{new T{ptr_destination}};
+    T* ptr{new T{ptr_destination}};
     return ptr;
 }
 
@@ -27,8 +27,8 @@ template<typename T>
 UniquePtr<T>::~UniquePtr()
 {
     std::cout << "unique_ptr distructor" << std::endl;
-    delete[] _p;
-     _p = nullptr;
+    delete _p;
+    _p = nullptr;
 }
 
 
@@ -47,7 +47,7 @@ T& UniquePtr<T>::operator*()
 
 
 template<typename T>
-T UniquePtr<T>::*operator->();
+T* UniquePtr<T>::operator->()
 {
     return _p;
 }

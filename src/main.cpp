@@ -5,7 +5,7 @@
 
 int main(int argc, char **argv)
 {
-    if (true) // make false to run unit-tests
+    if (false) // make false to run unit-tests
     {
         UniquePtr<std::string> ptr{new std::string{"hello"}};
         std::cout << ptr->length() << std::endl; // output: 5
