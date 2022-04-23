@@ -10,6 +10,7 @@ int main(int argc, char **argv)
         UniquePtr<int> ptr1{new int{10}};
         UniquePtr<int> ptr2{new int{11}};
         UniquePtr<int> ptr{new int{10}};
+        std::cout << *ptr << std::endl; // output: 10
         
     }
     else

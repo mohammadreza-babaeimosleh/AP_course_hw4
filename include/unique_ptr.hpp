@@ -52,5 +52,12 @@ T* UniquePtr<T>::get()
 }
 
 
+template<typename T>
+T& UniquePtr<T>::operator*()
+{
+    return *_p;
+}
+
+
 
 
