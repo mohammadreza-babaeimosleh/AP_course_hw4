@@ -1,6 +1,6 @@
 template<typename T>
-UniquePtr<T>::UniquePtr(T* p)
-    : _p{ p }
+UniquePtr<T>::UniquePtr(T* ptr)
+    : _p{ ptr }
 {
     std::cout << "unique_ptr constructor" << std::endl;
 }
@@ -50,6 +50,22 @@ template<typename T>
 T* UniquePtr<T>::operator->()
 {
     return _p;
+}
+
+
+template<typename T>
+void UniquePtr<T>::reset()
+{
+    delete _p;
+    _p = nullptr;
+}
+
+
+template<typename T>
+void UniquePtr<T>::reset(T* ptr)
+{
+    reset();
+    _p = ptr;
 }
 
 

@@ -6,7 +6,7 @@ template<typename T>
 class UniquePtr
 {
     public:
-    UniquePtr(T* p);
+    UniquePtr(T* ptr);
     UniquePtr();
     ~UniquePtr();
     UniquePtr(const UniquePtr<T>&) = delete;
@@ -14,6 +14,8 @@ class UniquePtr
     T* get();
     T& operator*();
     T* operator->();
+    void reset();
+    void reset(T* ptr);
   
 
     private:
