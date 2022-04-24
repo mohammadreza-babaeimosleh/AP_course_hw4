@@ -8,6 +8,9 @@ class SharedPtr
     public:
         SharedPtr(T* ptr);
         SharedPtr();
+        ~SharedPtr();
+        SharedPtr(const SharedPtr<T>& ptr);
+        T* get();
 
 
 
