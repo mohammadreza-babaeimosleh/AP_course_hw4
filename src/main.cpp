@@ -8,8 +8,17 @@ int main(int argc, char **argv)
 {
     if (true) // make false to run unit-tests
     {
-        SharedPtr<int> ptr{new int{10}};
-        std::cout << ptr.get() << std::endl; // output: raw pointer of the class
+        UniquePtr<double> ptr{new double{1.567}};
+        if(ptr)
+        {
+        }
+
+        ptr.reset();
+        if(ptr) 
+        {
+            
+        }
+
     }
     else
     {
