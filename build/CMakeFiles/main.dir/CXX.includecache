@@ -25,6 +25,8 @@ gtest/gtest.h
 -
 unique_ptr.h
 /usr/src/app/src/unique_ptr.h
+shared_ptr.h
+/usr/src/app/src/shared_ptr.h
 memory
 -
 
