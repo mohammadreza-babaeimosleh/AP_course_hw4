@@ -69,5 +69,19 @@ void UniquePtr<T>::reset(T* ptr)
 }
 
 
+template<typename T>
+UniquePtr<T>::operator bool()
+{
+    if(_p == nullptr)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+
 
 
