@@ -17,6 +17,7 @@ class UniquePtr
     void reset();
     void reset(T* ptr);
     operator bool();
+    T* release();
 
   
 

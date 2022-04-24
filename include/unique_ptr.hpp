@@ -83,5 +83,14 @@ UniquePtr<T>::operator bool()
 }
 
 
+template<typename T>
+T* UniquePtr<T>::release()
+{
+    T* tmp{_p};
+    _p = nullptr;
+    return tmp;
+}
+
+
 
 
