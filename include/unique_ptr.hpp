@@ -1,46 +1,42 @@
 template<typename T>
-UniquePtr<T>::UniquePtr(T* ptr)
+UniquePtr<T>::UniquePtr(T* ptr) //constructor
     : _p{ ptr }
 {
-    std::cout << "unique_ptr constructor" << std::endl;
 }
 
 
 template<typename T>
-UniquePtr<T>::UniquePtr()
+UniquePtr<T>::UniquePtr() //defualt constructor
     : _p{ nullptr }
 {
-    std::cout << "unique_ptr default constructor" << std::endl;
 }
 
 
 template<typename T>
-T* make_unique(T ptr_destination)
+T* make_unique(T ptr_destination) //external function
 {
-    std::cout << "contructing through make" << std::endl;
     T* ptr{ new T{ ptr_destination } };
     return ptr;
 }
 
 
 template<typename T>
-UniquePtr<T>::~UniquePtr()
+UniquePtr<T>::~UniquePtr() // destructor
 {
-    std::cout << "unique_ptr distructor" << std::endl;
     delete _p;
     _p = nullptr;
 }
 
 
 template<typename T>
-T* UniquePtr<T>::get()
+T* UniquePtr<T>::get() //getter
 {
     return _p;
 }
 
 
 template<typename T>
-T& UniquePtr<T>::operator*()
+T& UniquePtr<T>::operator*() 
 {
     return *_p;
 }
@@ -57,7 +53,7 @@ template<typename T>
 void UniquePtr<T>::reset()
 {
     delete _p;
-    _p = nullptr;
+    _p = nullptr; // for avoiding double free error
 }
 
 
@@ -86,7 +82,7 @@ UniquePtr<T>::operator bool()
 template<typename T>
 T* UniquePtr<T>::release()
 {
-    T* tmp{ _p };
+    T* tmp{ _p }; 
     _p = nullptr;
     return tmp;
 }

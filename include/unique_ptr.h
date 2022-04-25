@@ -9,7 +9,7 @@ class UniquePtr
         UniquePtr(T* ptr);
         UniquePtr();
         ~UniquePtr();
-        UniquePtr(const UniquePtr<T>&) = delete;
+        UniquePtr(const UniquePtr<T>&) = delete; //for compile error when attempting 
         UniquePtr<T>& operator=(const UniquePtr<T>) = delete;
         T* get();
         T& operator*();
@@ -18,8 +18,6 @@ class UniquePtr
         void reset(T* ptr);
         operator bool();
         T* release();
-
-  
 
     private:
         T* _p;
