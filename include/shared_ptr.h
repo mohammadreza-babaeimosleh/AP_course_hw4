@@ -19,9 +19,6 @@ class SharedPtr
         void reset(T* ptr);
         operator bool();
 
-
-
-
     private:
     T* _p; 
     int* count;
