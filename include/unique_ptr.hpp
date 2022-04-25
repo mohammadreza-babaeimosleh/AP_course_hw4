@@ -8,7 +8,7 @@ UniquePtr<T>::UniquePtr(T* ptr)
 
 template<typename T>
 UniquePtr<T>::UniquePtr()
-    : _p{nullptr}
+    : _p{ nullptr }
 {
     std::cout << "unique_ptr default constructor" << std::endl;
 }
@@ -18,7 +18,7 @@ template<typename T>
 T* make_unique(T ptr_destination)
 {
     std::cout << "contructing through make" << std::endl;
-    T* ptr{new T{ptr_destination}};
+    T* ptr{ new T{ ptr_destination } };
     return ptr;
 }
 
@@ -86,7 +86,7 @@ UniquePtr<T>::operator bool()
 template<typename T>
 T* UniquePtr<T>::release()
 {
-    T* tmp{_p};
+    T* tmp{ _p };
     _p = nullptr;
     return tmp;
 }

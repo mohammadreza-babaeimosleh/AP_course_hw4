@@ -6,7 +6,7 @@
 
 int main(int argc, char **argv)
 {
-    if (true) // make false to run unit-tests
+    if (false) // make false to run unit-tests
     {
         UniquePtr<double> ptr{new double{1.567}};
         if(ptr)
